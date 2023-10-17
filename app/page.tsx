@@ -1,8 +1,12 @@
 import Link from "next/link";
 
  async function fetchBlogs() {
-  // const apiUrl= process.env.VERCEL_URL;
-  const apiUrl= 'https://full-stack-blog-77x6av5a9-swatantrasinha.vercel.app'; 
+  let apiUrl;
+  if(process.env.NODE_ENV === 'production') {
+    apiUrl= process.env.VERCEL_URL;
+  } else {
+    apiUrl= 'http://localhost:3000'
+  }
   
   const res= await fetch(`${apiUrl}/api/blog/`, {
     next: {
