@@ -1,7 +1,8 @@
 import Link from "next/link";
 
  async function fetchBlogs() {
-  const res= await fetch('http://localhost:3000/api/blog/', {
+  const apiUrl= process.env.API_URL;
+  const res= await fetch(`${apiUrl}/api/blog/`, {
     next: {
       revalidate: 10,
     }, 

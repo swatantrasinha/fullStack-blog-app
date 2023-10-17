@@ -5,7 +5,7 @@ import React, { Fragment, useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 const postBlog = async({title,description}: {title: string, description: string}) => {
-    const res= fetch('http://localhost:3000/api/blog', {
+    const res= fetch('/api/blog', {
         method: 'POST',
         body: JSON.stringify({title, description}),
         //@ts-ignore
