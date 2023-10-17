@@ -1,7 +1,9 @@
 import Link from "next/link";
 
  async function fetchBlogs() {
-  const apiUrl= 'https://jsonplaceholder.typicode.com/posts'; // process.env.VERCEL_URL;
+  // const apiUrl= process.env.VERCEL_URL;
+  const apiUrl= 'https://full-stack-blog-77x6av5a9-swatantrasinha.vercel.app'; 
+  
   const res= await fetch(`${apiUrl}/api/blog/`, {
     next: {
       revalidate: 10,
