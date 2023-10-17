@@ -2,9 +2,9 @@ import Link from "next/link";
 
  async function fetchBlogs() {
   let apiUrl;
-  if(process.env.NODE_ENV === 'production') {
+  if(process.env.NODE_ENV === 'production') { // for prod env
     apiUrl= process.env.VERCEL_URL;
-  } else {
+  } else { // for dev env
     apiUrl= 'http://localhost:3000'
   }
   
