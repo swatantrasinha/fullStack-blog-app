@@ -14,7 +14,7 @@ import Link from "next/link";
 
  async function  Home() {
   const posts= await fetchBlogs()
-  console.log(posts);
+  // console.log(posts);
 
   
   return (

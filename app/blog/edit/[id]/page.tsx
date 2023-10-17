@@ -62,8 +62,8 @@ const EditBlog = ({params}: {params:{id:string}}) => {
     const handleSubmit = async (e: any) => {
         e.preventDefault()
         if(titleRef.current && descriptionRef.current) {
-            console.log('title : ', titleRef?.current?.value);
-            console.log('description : ', descriptionRef?.current?.value);
+            // console.log('title : ', titleRef?.current?.value);
+            // console.log('description : ', descriptionRef?.current?.value);
             toast.loading('Sending request', {id:"1"})
             await updateBlog({
                 title: titleRef?.current?.value,
